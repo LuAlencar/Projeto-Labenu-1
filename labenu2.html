@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  border:0;
+}
+body {
+  background-color: #595f96;
+  color: white;
+}
+
+.topo{
+  display:table;
+  width:100%;
+  text-align:center;
+  padding-top: 100px;
+}
+h2 {
+  font-family:verdana, sans-serif; 
+}
+
+.logo {
+  display: block;
+  margin: 30px auto 0;
+  width: 80%;
+  max-width: 400px;
+}
+
+h4 {
+  text-align: right;
+  color: white;
+  font-family:Open Sans, sans-serif; 
+  margin-right: 10px;
+}
+
+.flex-container {
+  display: table;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  background-color: red;
+  margin-top: 10px;
+}
+
+.max-bt{
+  display:table;
+  width:100%;
+  max-width:600px;
+  margin:0 auto;
+}
+
+.flex-container .max-bt>div {
+  background-color: white;
+  font-size: 20px;
+  height: 100px;
+  width: 27%;
+  margin: 50px 3%;
+  color: red;
+  text-align: center;
+  line-height: 100px;
+  font-family:Open Sans, sans-serif;
+  display:inline-block; 
+}
+
+.box-email{
+  display:table;
+  width: 100%;
+  text-align:center;
+  background-color:#d8d8d8;
+  padding: 10px 0;
+}
+
+.box-email #email{
+  width: 220px;
+  height: 40px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;	
+}
+.box-email .bt-submit{
+  width: 80px;
+  height: 40px;
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 400px) {
+	.topo{
+		padding-top: 157px;
+	}
+	.logo{
+		margin:110px auto;
+	}
+}
+
+</style>
+
+<script>
+function exibirMensagem(){
+
+  var email= document.getElementById('email').value;
+  if(email.match(/^[A-z0-9_\.-]+@[A-z]+\.[A-z09.]+$/g)!=null){
+
+    window.alert("O email " + email +" foi enviado");
+
+    window.confirm("Bem Vindo");
+  }
+}
+
+</script>
+</head>
+<body>
+  <div class="topo">
+      <h2>Projeto Seletivo Labenu</h2>
+      <a> <img src="Labenu_logo.png " alt="Labenu Logo"  class="logo" > </a>
+      <h4><i> Turmas 2020 </i></h4>
+  </div>
+
+  <div class="flex-container ">
+      <div class="max-bt">
+        <div><b> HTML </b> </div>
+        <div><b> CSS </b> </div>
+        <div><b> Javascript </b> </div>
+      </div>
+  </div>
+
+  <div class="box-email">
+      <form action="" method="post">
+        <input id="email" name="email" type="email" placeholder="Coloque seu email para contato! :) " size="30" /><input class="bt-submit" type="submit" value="Enviar" onclick="exibirMensagem()" /> 
+      </form>
+  </div>
+</body>
+</html>
